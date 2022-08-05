@@ -1,0 +1,198 @@
+<?php
+include("sign_up.php");
+include("connect.php");
+
+$first_name="";
+$last_name="";
+$gender="";
+$email="";
+
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+
+$signup= new Signup();
+$result= $signup->evaluate($_POST);
+
+
+if($result !="")
+{
+
+  echo "<br><div style='text-align:center;font-size:15px;color:black;background-color:grey;display:border-box,width:100%;height:250px;'><br><br><br>";
+  echo "the following errors occured<br>";
+echo$result;
+echo "</div>";
+}else{
+   header("Location: login.php");
+   die;
+}
+
+$last_name=$_POST['last_name'];
+$gender=$_POST['gender'];
+$email =$_POST['email'];
+$first_name=$_POST['first_name'];
+
+}
+
+
+?>
+
+
+<!DOCTYPE html>
+<html class="gradient">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | OnlyNam</title>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+">
+
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container">
+    <div class="navbar-brand"><h1>Only<span class="text-danger">Nam</span></h1></div>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active " aria-current="page" href="index.php">Home</a>
+        <a class="nav-link" href="login.php">Login</a>
+        <a class="nav-link" href="signup.php">Sign Up</a>
+        <a class="nav-link" href="#">About</a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+  <section class="page-header  gradient"  style="background-color: #eee;">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-md-11">
+        <div class="card text-black" style="border-radius: 12px;margin-top: 40px;margin-bottom: 24px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-lg-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" >Sign up</p>
+
+                <form class="mx-1 mx-md-4" method="post" action="">
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input value="<?php echo $first_name ?>" name="first_name" type="text" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">First Name</label>
+
+                    </div>
+
+                  </div>
+
+
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input value="<?php echo $last_name?>" name="last_name" type="text" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">Last Name</label>
+
+                    </div>
+
+                  </div>
+
+                      
+                     
+                   <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <select name="gender" class="select">
+                    <option><?php echo $gender ?></option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option></select>
+
+                    </div>
+                    
+                  </div>
+
+            
+
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input value="<?php echo $email ?>"  name="email" type="email" id="form3Example3c" class="form-control" />
+                      <label class="form-label" for="form3Example3c">Your Email</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input  name="password" type="password" id="form3Example4c" class="form-control" />
+                      <label class="form-label" for="form3Example4c">Password</label>
+                    </div>
+                  </div>
+
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input name="password2" type="password" id="form3Example4cd" class="form-control" />
+                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                    </div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                    <label class="form-check-label" for="form2Example3">
+                      I agree all statements in <a href="#!">Terms of service</a>
+                    </label>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button type="submit" id="button" class="btn btn-warning btn-lg">Sign up</button>
+                  </div>
+
+                </form>
+
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</header>
+
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+<footer class="footer" >
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <h4 class="text-reset fw-bold" href="#">ASL Web Development</h4>
+  </div>
+</footer>
+</html>

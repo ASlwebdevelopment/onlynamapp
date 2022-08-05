@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+     
+        <div class="logo_name">Only<span style="color: red;">Nam</div></span>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="profile.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Profile</span>
+       </a>
+       <span class="tooltip">Profile</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-bell' ></i>
+         <span class="links_name">Notifications</span>
+       </a>
+       <span class="tooltip">Notifications</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-plus-circle' ></i>
+         <span class="links_name">New Post</span>
+       </a>
+       <span class="tooltip">Create Post</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-user-plus' ></i>
+         <span class="links_name">Friends</span>
+       </a>
+       <span class="tooltip">Friends</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-wallet' ></i>
+         <span class="links_name">Wallet</span>
+       </a>
+       <span class="tooltip">Wallet</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="image/1.jpg" alt="profileImg">
+           
+          <div class="name_job">
+             <div class="name">Mpho</div>
+             <a href="#"class="job">Balance: N$1500.00</a>
+           </div>
+         </div>
+         
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+
+<!--------------------------------Fucking Profile----------------------------------------->
+
+<div class="profile-container">
+  <!---<img src="images/cover.png" class="cover-img">--->
+  <div class="profile-detail">
+    <div class="pd-left">
+      <div class="pd-row">
+        <img src="image/1.jpg" class="pd-img">
+         <div>
+           <h3>Mpho confidence</h3>
+           <p>1.5M Friends - 700k Mutual</p>
+           <img src="images/member-1.png">
+           <img src="images/member-2.png">
+           <img src="images/member-3.png">
+           <img src="images/member-4.png">
+         </div>
+      </div>
+    </div>
+    <div class="pd-right">
+      <button type="button"><img src="edit.png">Edit profile</button>
+      <button type="button"><img src="plus.png">Add to story</button>
+      
+    </div>
+
+  </div>
+<div class="more-buttons">
+
+  <a href="#">Posts</a>
+  <a href="#">About</a>
+  <a href="#">Friends</a>
+  <a href="#">Photos</a>
+  <a href="#">Videos</a>
+
+  <a href="#"><img src="images/more.png"></a>
+    </div>
+<!-------------------------------closing------------------>
+
+<div class="profile-info">
+  <div class="info-col">
+    <div class="profile-intro">
+      <h3>Intro</h3>
+      <p class="intro-input">Content creator - sexy af - </p>
+      <hr>
+      <ul>
+        <li><img src="images/profile-job.png">Content creator at OnlyNam LTD</li>
+        <li><img src="images/profile-study.png">Studied at Harvard University</li>
+        <li><img src="images/profile-location.png">Lives in Berseba, Namibia</li>
+        <li><img src="images/profile-home.png">From Khorixas, Namibia</li>
+      </ul>
+    </div>
+    <div class="profile-intro">
+      <div class="title-box">
+      <h3>Photos</h3>
+      <a href="#">All Photos</a>
+    </div>
+      <div class="photo-box">
+        <div><img src="post.jpg" ></div>
+      <div><img src="image/1.jpg"></div>
+      <div><img src="cover.jpg" ></div>
+      <div><img src="post2.jpg" ></div>
+      <div><img src="22.jpg" ></div>
+      <div><img src="55.jpg" ></div>
+    </div>
+    </div>
+
+
+<!--------friends------------------>
+
+<div class="profile-intro">
+      <div class="title-box">
+      <h3>Friends</h3>
+      <a href="#">All Friends</a>
+    </div>
+    <p>1.5M - 700k Mutual</p>
+      <div class="friends-box">
+      <div><img src="images/member-1.png"> <p>Jospep N</p> </div>
+      <div><img src="images/member-2.png"> <p>Nathan N</p> </div>
+      <div><img src="images/member-3.png"> <p>George D</p> </div>
+      <div><img src="images/member-4.png"> <p>Francis L</p> </div>
+      <div><img src="images/member-5.png"> <p>Anthony </p> </div>
+      <div><img src="images/member-6.png"> <p>Micheal A</p> </div>
+      <div><img src="images/member-7.png"> <p>Edward M</p> </div>
+      <div><img src="images/member-8.png"> <p>Brandon </p> </div>
+      <div><img src="images/member-9.png"> <p>James J</p> </div>
+    </div>
+    </div>
+
+
+
+  </div>
+  <div class="post-col">
+<!---------------------------------------------------------post container--->
+    <div class="write-post-container">
+
+  <div class="user-profile">
+    <img src="image/1.jpg" width="50" height="50
+    ">
+    <div>
+      <p>Mpho</p>
+      <small>public<i class='bx bx-world'></i></small>
+    </div>
+  </div>
+
+  <div class="post-input-container">
+
+    <textarea rows="3" placeholder="Compose new post"></textarea>
+    
+
+    <div class="add-post-links">
+      <a href="#"><img src="live-video.png">Price</a>
+       <a href="#"><img src="upload-image.png">Photo/Video</a>
+        <a href="#"><img src="feeling.png">Feeling/Activity</a>
+    </div>
+  </div>
+</div>
+
+<div class="post-container">
+  <div class="post-row">
+ <div class="user-profile">
+    <img src="image/1.jpg" width="50" height="50
+    ">
+    <div>
+      <p>Mpho</p>
+      <span>june 6 2022, 16:02</span>
+    </div>
+  </div>    
+    <a href="#"><i class='bx bx-dots-vertical-rounded'></i></a>
+  </div>
+ 
+  <p class="post-text">Buy my content now for limited time only 1 pic=N$50 1 vid=N$100 <a href="#">#Nudes</a> <a href="#">#OnlyNam</a></p>
+  <img src="post.jpg" class="post-img" id="test18">
+  
+
+  <div class="post-row">
+    <div class="activity-icons">
+     <div><img src="like.png">6400</div>
+     <div><img src="comment.png">267</div>
+     <div><img src="live-video.png"><button style="background: white;
+color: #626262;
+cursor: pointer;border-radius: 5px; " onClick="test()">Tip N$100</button></div>
+     
+
+
+
+
+
+
+      
+    </div>
+
+ <div class="post-profile-icon">
+        <img src="image/1.jpg" >
+        <a href="#"><i class='bx bx-down-arrow'></i></a>
+      </div>
+
+</div>
+  </div>
+
+
+
+<div class="post-container">
+  <div class="post-row">
+ <div class="user-profile">
+    <img src="image/1.jpg" width="50" height="50
+    ">
+    <div>
+      <p>Mpho</p>
+      <span>june 7 2022, 13:40</span>
+    </div>
+  </div>    
+    <a href="#"><i class='bx bx-dots-vertical-rounded'></i></a>
+  </div>
+ 
+  <p class="post-text">😍<a href="#"></a> <a href="#">#OnlyNam</a></p>
+  <img src="post2.jpg" class="post-img-1" >
+  
+
+  <div class="post-row">
+    <div class="activity-icons">
+     <div><img src="like.png">12</div>
+     <div><img src="comment.png">1</div>
+     <div><img src="live-video.png"><button style="background: white;
+color: #626262;
+cursor: pointer;border-radius: 5px; " onClick="test()">Tip N$10</button></div>
+     
+
+
+
+
+
+
+      
+    </div>
+
+ <div class="post-profile-icon">
+        <img src="image/1.jpg" >
+        <a href="#"><i class='bx bx-down-arrow'></i></a>
+      </div>
+
+</div>
+  </div>
+
+
+    </div>
+
+    <!---post-col---->
+  </div>
+  <!---end--->
+</div>
+
+
+
+
+
+<!-------------------rfhdhsdgjndsg--------------->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------end of profile------------------------------------------>
+ 
+ 
+
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+
+<script>
+        function test(){
+document.getElementById("test18").style.filter="blur(0)"
+        }
+      </script>
+
+  
+
+</body>
+</html>
