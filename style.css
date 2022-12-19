@@ -62,6 +62,7 @@ section{
 
 }
 
+
 .slider .slide-track{
 	animation: scroll 10s linear infinite;
 	display: flex;
@@ -79,4 +80,6 @@ background:rgba(0,0,0,0.8)
 
 .bg-default{
 background:rgba(0,0,0,0.8)
+}
+.btn{border-radius:20px;
 }
