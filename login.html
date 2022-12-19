@@ -1,44 +1,3 @@
-<?php
-session_start();
-include("login_class.php");
-include("connect.php");
-
-$email="";
-$password="";
-
-
-
-
-if($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-
-$login= new Login();
-$result= $login->evaluate($_POST);
-
-
-if($result !="")
-{
-
-  echo "<br><div style='text-align:center;font-size:15px;color:black;background-color:grey;display:border-box,width:100%;height:250px;'><br><br><br>";
-  echo "the following errors occured<br>";
-echo$result;
-echo "</div>";
-}else{
-   header("Location: profile.php");
-   die;
-}
-
-
-$email =$_POST['email'];
-$password=$_POST['password'];
-
-
-
-}
-
-
-?>
-
 
 <!DOCTYPE html>
 <html class="gradient">
@@ -127,7 +86,7 @@ $password=$_POST['password'];
 <footer class="footer" >
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2022 Copyright:
-    <h4 class="text-reset fw-bold" href="#">ASL Web Development</h4>
+    <h4 class="text-reset fw-bold" href="#">Onlynam</h4>
   </div>
 </footer>
 
